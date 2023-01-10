@@ -2,15 +2,8 @@ version: '3.7'
 
 services:
 
-  sample:
-    container_name: sample
-    build:
-      context: .
-      dockerfile: Dockerfile
-    volumes:
-      - '.:/app'
-      - '/app/node_modules'
-    ports:
-      - 80:3000
-    environment:
-      - CHOKIDAR_USEPOLLING=true
+ reactapp:
+         image: reactapp:v1
+         container_name: reactapp
+         ports:
+                 - 80:80
