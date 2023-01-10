@@ -6,4 +6,4 @@ services:
          image: reactapp:v1
          container_name: reactapp
          ports:
-                 - 80:80
+                 - 80:3000
