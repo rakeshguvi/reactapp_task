@@ -4,7 +4,7 @@ services:
 
   sample:
     container_name: reactapp
-    image: react_dev:v1
+    image: rakeshguvi/react_dev:v1
     volumes:
       - '.:/app'
       - '/app/node_modules'
