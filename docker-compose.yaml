@@ -4,9 +4,7 @@ services:
 
   sample:
     container_name: reactapp
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: react:v1
     volumes:
       - '.:/app'
       - '/app/node_modules'
