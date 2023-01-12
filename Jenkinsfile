@@ -1,5 +1,10 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+            image 'node:alpine
+            arg '-p 80:3000'
+        }
+    }
     stages {
         stage('Build docker image'){
             steps{
