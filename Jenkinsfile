@@ -1,5 +1,5 @@
 pipeline {
-    agent {label "Build-In Node"}
+    agent {label "jenkins"}
            stages {
         stage('Build docker image'){
             steps{
