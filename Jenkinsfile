@@ -10,9 +10,9 @@ pipeline {
         stage('Docker Push') {
     	        agent any
             steps {
-      	     withCredentials([usernamePassword(credentialsId: 'dockerHub', passwordVariable: 'dockerHubPassword', usernameVariable: 'dockerHubUser')]) {
-        	    sh "docker login -u ${env.dockerHubUser} -p ${env.dockerHubPassword}"
-              sh 'docker push shanem/spring-petclinic:latest'
+      	     withCredentials([usernamePassword(credentialsId: 'rak-docker', passwordVariable: 'rak-dockerPassword', usernameVariable: 'rak-dockerUser')]) {
+        	    sh "docker login -u ${env.rak-dockerUser} -p ${env.rak-dockerPassword}"
+              sh 'docker push rakeshguvi/react_dev:v1'
         }
       }
     }
