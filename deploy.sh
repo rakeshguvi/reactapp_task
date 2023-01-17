@@ -6,4 +6,3 @@ elif [ "$image_id" == "rakeshguvi/react_prod" ]; then
 else
         echo " No Image"
 fi
-ls

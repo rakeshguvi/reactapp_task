@@ -10,4 +10,3 @@ else [ "$git_branch" == "main" ];
       docker build -t --no-cache rakeshguvi/react_prod:$(docker images | awk '($1 == "rakeshguvi/react_prod") {print $2 += .01; exit}') .
 fi
 
-ll
