@@ -1,5 +1,5 @@
 #!/bin/bash
-
+git checkout dev
 # Get the current git branch
 git_branch=$(git rev-parse --abbrev-ref HEAD)
 
