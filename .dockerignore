@@ -1,8 +1,10 @@
 Dockerfile
 docker-compose.yaml
 npm-debug.log
-dockpass
 .dockerignore
 **/.git
 **/.DS_Store
 **/node_modules
+./build.sh
+./deploy.sh
+.gitignore
