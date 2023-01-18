@@ -11,8 +11,8 @@ git_branch=$(ls | grep package.json)
 #      docker build -t --no-cache rakeshguvi/react_prod:$(docker images | awk '($1 == "rakeshguvi/react_prod") {print $2 += .01; exit}') .
 #fi
 if [ "$git_branch" == "package.json" ]; then
-	docker build -t --no-cache rakeshguvi/react_prod:$(docker images | awk '($1 == "rakeshguvi/react_prod") {print $2 += .01; exit}') .
+	docker build --no-cache -t rakeshguvi/react_prod:$(docker images | awk '($1 == "rakeshguvi/react_prod") {print $2 += .01; exit}') .
 else
 	git checkout dev
-	docker build -t --no-cache rakeshguvi/react_dev:$(docker images | awk '($1 == "rakeshguvi/react_dev") {print $2 += .01; exit}') .
+	docker build --no-cache -t rakeshguvi/react_dev:$(docker images | awk '($1 == "rakeshguvi/react_dev") {print $2 += .01; exit}') .
 fi
